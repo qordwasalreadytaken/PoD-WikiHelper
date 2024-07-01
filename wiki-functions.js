@@ -30,12 +30,7 @@ function PickAPatch(){
     document.getElementById('patch').value = patchno;
 }
 
-function GetPatch(){
-    var e = document.getElementById("patch-names");
-    var value = e.value;
-    text = e.options[e.selectedIndex].text;
-    GetPatchUrl(this)
-}
+
 
 function GetPatchUrl(){
     switch (text){
@@ -104,6 +99,13 @@ function GetPatchUrl(){
         break;
     } 
     document.getElementById('picked-patch').value = patchurl;
+}
+
+function GetPatch(){
+    var e = document.getElementById("patch-names");
+    var value = e.value;
+    text = e.options[e.selectedIndex].text;
+    GetPatchUrl(this)
 }
 
 function patchcode1() {
