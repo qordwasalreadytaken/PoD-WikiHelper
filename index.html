@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Path of Diablo Wiki Skill Description Helper</title>
+    <script type="text/javascript" src="./wiki-functions.js"></script>
+    <link rel="stylesheet" href="wiki-function.css">
+</head>
+
+<body>
+    <div style="display: flex; justify-content: space-around">    
+        <div>    
+            <h1>Skill Description</h1>
+            <form>
+                <label for="sdicon">URL for skill icon:</label><br>
+                <input type="text" id="sdicon" name="sdicon"><br><br>
+                <label for="skdsk">Skill Description:</label><br>
+                <textarea id="skdsk" name="skdsk"></textarea><br><br>
+                <label for="lvlreq">Level Requirement:</label><br>
+                <input type="text" id="lvlreq" name="lvlreq"><br><br>
+                <label for="prereq">Comma separated list of prerequisites:</label><br>
+                <textarea id="prereq" name="prereq" value="None"></textarea><br><br>
+                <button name="makeskilldesc" class="action_btn submit" type="button" value="makeskilldesc" onclick="MakeSkillDesc()">Make Skill Description</button>
+                <button name="reset" class="action_btn submit" type="reset" value="reset" onclick="MakeSkillDesc()">Clear Form</button>
+            </form> 
+       <br><br>
+            <form>
+                <label for="skilldesccode">Copy/pasteable Skill Description wiki Code:</label><br>
+                <textarea id="skilldesccode" name="skilldesccode"></textarea>
+            </form> 
+        </div>
+        <div>
+            <h1>Patch Notes</h1>            
+<!--            <div class="dropdown">
+                <button class="dropbtn" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                </button>
+                <div class="dropdown-content" id="pickapatch">
+                        <a button class="dropdown-item" type="button" id="pno" value="p1" onclick="PickAPatch()">#1 Bedrock</button>
+                        <a button class="dropdown-item" type="button" id="pno" value="p2" onclick="PickAPatch()">#2 Quartz</button>
+                        <a button class="dropdown-item" type="button" id="pno" value="p3" onclick="PickAPatch()">#3 Granite</button>
+                        <a button class="dropdown-item" type="button" id="pno" value="p4" onclick="PickAPatch()">#4 Onyx</button>
+                        <a button class="dropdown-item" type="button" id="pno" value="p5" onclick="PickAPatch()">#5 Limestone</button>
+                        <a button class="dropdown-item" type="button" id="pno" value="p6" onclick="PickAPatch()">#6 Obsidian</button>
+                        <a button class="dropdown-item" type="button" id="pno" value="p7" onclick="PickAPatch()">#7 Bery</button>
+                        <a button class="dropdown-item" type="button" id="pno" value="p8" onclick="PickAPatch()">#8 Pyrite</button>
+                        <a button class="dropdown-item" type="button" id="pno" value="p9" onclick="PickAPatch()">#9 Aventurine</button>
+                        <a button class="dropdown-item" type="button" id="pno" value="p10" onclick="PickAPatch()">#10 Tanzanite</button>
+                        <a button class="dropdown-item" type="button" id="pno" value="p11" onclick="PickAPatch()">#11 Kyanite</button>
+                        <a button class="dropdown-item" type="button" id="pno" value="p12" onclick="PickAPatch()">#12 Edenite</button>
+                        <a button class="dropdown-item" type="button" id="pno" value="p13" onclick="PickAPatch()">#13 Titanium</button>
+                        <a button class="dropdown-item" type="button" id="pno" value="p14" onclick="PickAPatch()">#14 Serandite</button>
+                        <a button class="dropdown-item" type="button" id="pno" value="p15" onclick="PickAPatch()">#15 Graphite</button>
+                        <a button class="dropdown-item" type="button" id="pno" value="p16" onclick="PickAPatch()">#16 Jade</button>
+                        <a button class="dropdown-item" type="button" id="pno" value="p17" onclick="PickAPatch()">#17 Tourmaline</button>
+                        <a button class="dropdown-item" type="button" id="pno" value="p18" onclick="PickAPatch()">#18 Flint</button>
+                        <a button class="dropdown-item" type="button" id="pno" value="p19" onclick="PickAPatch()">#19 Zincite</button>
+                        <a button class="dropdown-item" type="button" id="pno" value="p20" onclick="PickAPatch()">#20 Perlite</button>
+                        <a button class="dropdown-item" type="button" id="pno" value="p21" onclick="PickAPatch()">#21 Shungite</button>
+
+                </div>
+            </div> -->
+            <form>
+<!--                <label for="patch">PoD Patch:</label><br>
+                <input type="text" id="patch" name="patch"><br><br> -->
+<!--               <details><summary>Items</summary>
+                    <div onclick="">Item 1</div>
+                    <div onclick="">Item 2</div>
+                    <div onclick="">Item 3</div>
+                    <div onclick="">Item 4</div>
+                    </details> -->
+                <label for="patch-names">Pick a patch:</label><br>
+                <select name="patch-names" id="patch-names">
+                    <option  onclick="GetPatch()">#1 Bedrock</option >
+                    <option  onclick="GetPatch()">#2 Quartz</option >
+                    <option  onclick="GetPatch()">#3 Granite</option >
+                    <option  onclick="GetPatch()">#4 Onyx</option >
+                    <option  onclick="GetPatch()">#5 Limestone</option >
+                    <option  onclick="GetPatch()">#6 Obsidian</option >
+                    <option  onclick="GetPatch()">#7 Beryl</option >
+                    <option  onclick="GetPatch()">#8 Pyrite</option >
+                    <option  onclick="GetPatch()">#9 Aventurine</option >
+                    <option  onclick="GetPatch()">#10 Tanzanite</option >
+                    <option  onclick="GetPatch()">#11 Kyanite</option >
+                    <option  onclick="GetPatch()">#12 Edenite</option >
+                    <option  onclick="GetPatch()">#13 Titanium</option >
+                    <option  onclick="GetPatch()">#14 Serandite</option >
+                    <option  onclick="GetPatch()">#15 Graphite</option >
+                    <option  onclick="GetPatch()">#16 Jade</option >
+                    <option  onclick="GetPatch()">#17 Tourmaline</option >
+                    <option  onclick="GetPatch()">#18 Flint</option >
+                    <option  onclick="GetPatch()">#19 Zincite</option >
+                    <option  onclick="GetPatch()">#20 Perlite</option >
+                    <option  onclick="GetPatch()">#21 Shungite</option >
+                    </select>    
+<!--                <button name="getpatchurl" type="button" value="getpatchurl" onclick="GetPatchUrl()">Get Patch url</button>  -->
+                <br><br>
+                <label for="picked-patch">You picked url:</label><br>
+                <input type="text" name="picked-patch" id="picked-patch">
+      
+            </form>    
+            <br>
+            <form>
+                <label for="patchnotes">Paste existing skill Patch Notes here: </label><br>
+                <textarea id="patchnotes" name="patchnotes"></textarea><br><br>
+            </form> 
+            <form>
+                <label for="formattedpatchnotes">Copy/pasteable skill Patch Notes wiki Code: </label><br>
+                <textarea id="formattedpatchnotes" name="formattedpatchnotes"></textarea><br>
+                <button name="makepatchnotes" type="button" value="makepatchnotes" onclick="patchcode1()">Make Patch Notes</button>  
+                <button name="makemorepatchnotes" type="button" value="makemorepatchnotes" onclick="patchcode2()">Make More Patch Notes</button>  <br><br>
+
+            </form> 
+        </div>
+ 
+        </div>
+
+</div>
+
+    
+</body>
+</html>
