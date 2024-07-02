@@ -30,8 +30,6 @@ function PickAPatch(){
     document.getElementById('patch').value = patchno;
 }
 
-
-
 function GetPatchUrl(){
     switch (text){
         case '#1 Bedrock':
@@ -124,6 +122,17 @@ function patchcode2() {
     spacer2 = '|style="border-bottom: 1px solid #a2a9b1;"|'
     spacer3 = '||style="border-bottom: 1px solid #a2a9b1;"| \n'
 
+    if (patchvolume == 2) {
+        patchurl2 = document.getElementById('picked-patch').value ;
+        var oldnotes2 = document.getElementById('patchnotes').value ;
+        var addasterisk2 = oldnotes2.replace(/^(?!>)/gm, '* ') ;   
+        newnotes4 = document.getElementById('formattedpatchnotes').value ;
+        newnotes5 = newnotes4.replace(/\|\}\n\|\}\s*$/, '');
+        newnotes6 = newnotes5 + '|-\n' + spacer2 + patchurl2 + spacer3 + addasterisk2 + '\n|}\n|}\n' ; 
+        document.getElementById('formattedpatchnotes').value = newnotes6 ;
+        document.getElementById('patchnotes').value = "" ;
+        patchvolume = 2
+    }
     if (patchvolume == 1) {
         patchurl = document.getElementById('picked-patch').value ;
         var oldnotes = document.getElementById('patchnotes').value ;
@@ -135,19 +144,9 @@ function patchcode2() {
 //          newnotes1 = newnotes1.replace((/\|\}([^_]*)$/, '\|\-')) ;
         newnotes2 = newnotes1.replace(/\|\}\s*$/, '');
 //        newnotes3 = newnotes2 + spacer + '|' + patchurl + '|| \n' + addasterisk + '\n|}' ; 
-        newnotes3 = newnotes2 + spacer + patchurl +  spacer3 + '\n' + addasterisk + '\n|}\n|}'  ; 
-        document.getElementById('formattedpatchnotes').value = newnotes3 ;
-            document.getElementById('patchnotes').value = "" ;
-            patchvolume = 2
-    }
-    if (patchvolume == 2) {
-        patchurl2 = document.getElementById('picked-patch').value ;
-        var oldnotes2 = document.getElementById('patchnotes').value ;
-        var addasterisk2 = oldnotes2.replace(/^(?!>)/gm, '* ') ;   
-        newnotes4 = document.getElementById('formattedpatchnotes').value ;
-        newnotes5 = newnotes4.replace(/\|\}\n\|\}\s*$/, '');
-        newnotes6 = newnotes5 + '|-\n' + spacer2 + patchurl2 + spacer3 + addasterisk2 + '\n|}\n|}\n' ; 
-        document.getElementById('formattedpatchnotes').value = newnotes6 ;
+        newnotes3 = newnotes2 + spacer + patchurl +  spacer3 + addasterisk + '\n|}\n|}'  ; 
+        document.getElementById('formattedpatchnotes').value = newnotes2 + spacer + patchurl +  spacer3 + addasterisk + '\n|}\n|}'  ; 
+//        document.getElementById('formattedpatchnotes').value = newnotes3 ;
         document.getElementById('patchnotes').value = "" ;
         patchvolume = 2
     }
