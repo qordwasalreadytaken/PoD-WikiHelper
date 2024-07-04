@@ -173,3 +173,11 @@ function freshStart() {
 //    document.getElementById('picked-patch').value  = "[[Patch_Notes#Patch_.2321:_Shungite|#21 Shungite]]" ;
     ClearFields() ;
 }
+
+function nosynergiesl() {
+    document.getElementById('no-syn').value = "{{Skilldescnosynergiesleft}}";
+}
+
+function nosynergiesr() {
+    document.getElementById('no-syn').value = "{{Skilldescnosynergiesright}}";
+}

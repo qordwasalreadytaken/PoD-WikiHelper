@@ -7,55 +7,62 @@
 </head>
 
 <body>
-    <div style="display: flex; justify-content: space-around">    
-        <div>
-            <h1>Patch Notes</h1>            
-            <form>
-                <label for="patch-names">Pick a patch:</label><br>
-                <select name="patch-names" id="patch-names">
-                    <option  onclick="GetPatch()">#1 Bedrock</option >
-                    <option  onclick="GetPatch()">#2 Quartz</option >
-                    <option  onclick="GetPatch()">#3 Granite</option >
-                    <option  onclick="GetPatch()">#4 Onyx</option >
-                    <option  onclick="GetPatch()">#5 Limestone</option >
-                    <option  onclick="GetPatch()">#6 Obsidian</option >
-                    <option  onclick="GetPatch()">#7 Beryl</option >
-                    <option  onclick="GetPatch()">#8 Pyrite</option >
-                    <option  onclick="GetPatch()">#9 Aventurine</option >
-                    <option  onclick="GetPatch()">#10 Tanzanite</option >
-                    <option  onclick="GetPatch()">#11 Kyanite</option >
-                    <option  onclick="GetPatch()">#12 Edenite</option >
-                    <option  onclick="GetPatch()">#13 Titanium</option >
-                    <option  onclick="GetPatch()">#14 Serandite</option >
-                    <option  onclick="GetPatch()">#15 Graphite</option >
-                    <option  onclick="GetPatch()">#16 Jade</option >
-                    <option  onclick="GetPatch()">#17 Tourmaline</option >
-                    <option  onclick="GetPatch()">#18 Flint</option >
-                    <option  onclick="GetPatch()">#19 Zincite</option >
-                    <option  onclick="GetPatch()">#20 Perlite</option >
-                    <option selected="selected" onclick="GetPatch()">#21 Shungite</option >
-                    </select>    
+    <div>
+        <h1>Patch Notes</h1>            
+        <form>
+            <div>
+            <label for="patch-names">Pick a patch:</label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <select name="patch-names" id="patch-names">
+                <option  onclick="GetPatch()">#1 Bedrock</option >
+                <option  onclick="GetPatch()">#2 Quartz</option >
+                <option  onclick="GetPatch()">#3 Granite</option >
+                <option  onclick="GetPatch()">#4 Onyx</option >
+                <option  onclick="GetPatch()">#5 Limestone</option >
+                <option  onclick="GetPatch()">#6 Obsidian</option >
+                <option  onclick="GetPatch()">#7 Beryl</option >
+                <option  onclick="GetPatch()">#8 Pyrite</option >
+                <option  onclick="GetPatch()">#9 Aventurine</option >
+                <option  onclick="GetPatch()">#10 Tanzanite</option >
+                <option  onclick="GetPatch()">#11 Kyanite</option >
+                <option  onclick="GetPatch()">#12 Edenite</option >
+                <option  onclick="GetPatch()">#13 Titanium</option >
+                <option  onclick="GetPatch()">#14 Serandite</option >
+                <option  onclick="GetPatch()">#15 Graphite</option >
+                <option  onclick="GetPatch()">#16 Jade</option >
+                <option  onclick="GetPatch()">#17 Tourmaline</option >
+                <option  onclick="GetPatch()">#18 Flint</option >
+                <option  onclick="GetPatch()">#19 Zincite</option >
+                <option  onclick="GetPatch()">#20 Perlite</option >
+                <option selected="selected" onclick="GetPatch()">#21 Shungite</option >
+                </select>    
 <!--                <button name="getpatchurl" type="button" value="getpatchurl" onclick="GetPatchUrl()">Get Patch url</button>  -->
-                <br><br>
-                <label for="picked-patch">You picked url:</label><br>
-                <input type="text" name="picked-patch" id="picked-patch">
-      
-            </form>    
+            </div>
             <br>
-            <form>
-                <label for="patchnotes">Paste existing skill Patch Notes here: </label><br>
-                <textarea type="text" id="patchnotes" name="patchnotes"></textarea><br><br>
-            </form> 
-            <form>
-                <label for="formattedpatchnotes">Copy/pasteable skill Patch Notes wiki Code: </label><br>
-                <textarea type="text" id="formattedpatchnotes" name="formattedpatchnotes"></textarea><br><br>
-                <button class=button name="makepatchnotes" type="button" value="makepatchnotes" onclick="patchcode1()">Create/add-to Patch Notes</button>  
-                <button class=button name="makemorepatchnotes" type="button" value="makemorepatchnotes" onclick="freshStart()">Start Fresh</button>  <br><br>
+            <div>
+            <label for="picked-patch">You picked url:</label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" name="picked-patch" id="picked-patch">
+            </div>
+        </form>    
+        <br>
+        <form>
+            <label for="patchnotes">Paste existing skill Patch Notes here: </label><br>
+            <textarea type="text" id="patchnotes" name="patchnotes"></textarea><br><br>
+        </form> 
+        <form>
+            <label for="formattedpatchnotes">Copy/pasteable skill Patch Notes wiki Code: </label><br>
+            <textarea type="text" id="formattedpatchnotes" name="formattedpatchnotes"></textarea><br><br>
+            <button class=button name="makepatchnotes" type="button" value="makepatchnotes" onclick="patchcode1()">Create/add-to Patch Notes</button>  
+            <button class=button name="makemorepatchnotes" type="button" value="makemorepatchnotes" onclick="freshStart()">Start Fresh</button>  <br><br>
 <!--                <button class=button name="makemorepatchnotes" type="button" value="makemorepatchnotes" onclick="patchcode2()">Make More Patch Notes</button>  <br><br> -->
 
-            </form> 
-        </div>        
-        <div>    
+        </form> 
+    </div>        
+
+    <br><br><br><br><br><br><br><br>
+    <div style="display: flex; justify-content: space-around;">    
+       <div>    
             <h1>Skill Description</h1>
             <form>
                 <label for="sdicon">URL for skill icon:</label><br>
@@ -74,8 +81,25 @@
                 <label for="skilldesccode">Copy/pasteable Skill Description wiki Code:</label><br>
                 <textarea type="text" id="skilldesccode" name="skilldesccode"></textarea>
             </form> 
+            <br><br><br><br><br><br><br><br>
+        
         </div>
-
+        <div style="display: flex; justify-content: space-around;">    
+            <div>
+                <h1>Misc and Synergies</h1>            
+                <form>
+                    <p>No synergies on left or right:</p>
+                      <input type="radio" id="html" name="fav_language" value="HTML" onclick="nosynergiesl()">
+                      <label for="html">No synergies left</label><br>
+                      <input type="radio" id="css" name="fav_language" value="CSS" onclick="nosynergiesr()">
+                      <label for="css">No synergies right</label><br>
+                    <label for="no-syn">Wiki code for no synergies:</label>
+                    <br>
+                    <input type="text" name="no-syn" id="no-syn">
+        
+                </form>
+            </div>  
+        </div>  
  
         </div>
 

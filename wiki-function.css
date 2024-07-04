@@ -72,20 +72,20 @@ textarea {
   background-color: #383838;
 }
 #patch-names {
-  width : 300px;
+  width : 150px;
   background-color: #383838;
 }
 #picked-patch {
-  width : 300px;
+  width : 375px;
   background-color: #383838;
 }
 #patchnotes {
   height: 100px;
-  width : 500px;
+  min-width: 700px;
   background-color: #383838;
 }
 #formattedpatchnotes {
   height: 200px;
-  width : 500px;
+  min-width : 700px;
   background-color: #383838;
 }
