@@ -5,8 +5,6 @@ window.onload = (event) => {
     document.getElementById('patchnotes').value = "" ;
     document.getElementById('formattedpatchnotes').value = "" ;
     ClearFields() ;
-    freshStart()
-//    PickAPatch() ;
   };
 
 var patchvolume = 0
@@ -17,7 +15,6 @@ function ClearFields() {
     document.getElementById("lvlreq").value = "";
     document.getElementById("prereq").value = "";
     document.getElementById('skilldesccode').value = "";
-//    PickAPatch()
 }
 
 function MakeSkillDesc() {
@@ -100,9 +97,6 @@ function GetPatchUrl(){
         case '#21 Shungite':
         patchurl = "[[Patch_Notes#Patch_.2321:_Shungite|#21 Shungite]]";
         break;
-        case '#22 Minium':
-        patchurl = "[[Patch_Notes#Patch_.2322:_Minium|#22 Minium]]";
-        break;
     } 
     document.getElementById('picked-patch').value = patchurl;
 }
@@ -173,7 +167,7 @@ function freshStart() {
     document.getElementById('patchnotes').value = "" ;
     document.getElementById('formattedpatchnotes').value = "" ;
  //   GetPatchUrl("#21 Shungite") ;
-    text = "#22 Minium" ;
+    text = "#21 Shungite" ;
     GetPatchUrl(text) ;
 //    patchurl = "#21 Shungite";
 //    document.getElementById('picked-patch').value  = "[[Patch_Notes#Patch_.2321:_Shungite|#21 Shungite]]" ;
